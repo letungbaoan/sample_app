@@ -1,33 +1,24 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  static_pages:
+    home:
+      welcome: "Welcome to the Sample App"
+      tagline_html: "This is the home page for the <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a> sample application."
+      signup: "Sign up now!"
+      title: "Home"
+    contact:
+      title: "Contact"
+      heading: "Contact Us"
+      greeting: "Hello, %{name}!"
+      description: "This is the contact page for the Ruby on Rails Tutorial Sample App."
+      reach_out: "Feel free to reach out to us!"
+    help:
+      title: "Help"
+      get_help_html: "Get help on the Ruby on Rails Tutorial at the <a href=\"http://www.railstutorial.org/help\">Rails Tutorial help page</a>. To get help on this sample app, see the <a href=\"http://www.railstutorial.org/book\"><em>Ruby on Rails Tutorial</em> book</a>."
+  microposts:
+    index:
+      all_microposts: "All Microposts"
+      no_microposts: "No microposts found yet."
+      user_id_label: "(User ID: %{id})"
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
