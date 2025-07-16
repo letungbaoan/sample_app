@@ -1,0 +1,17 @@
+<h1><%= t("microposts.index.all_microposts") %></h1>
+
+<% if @microposts.any? %>
+  <ul>
+    <% @microposts.each do |micropost| %>
+      <li>
+        <%= micropost.content %>
+        <% if micropost.user_id.present? %>
+          <br>
+          <%= t("microposts.index.user_id_label", id: micropost.user_id) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><%= t("microposts.index.no_microposts") %></p>
+<% end %>
