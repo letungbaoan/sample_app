@@ -27,7 +27,19 @@ en:
       login: "Log in"
       new_user?: "New user?"
       sign_up_now!: "Sign up now!"
-      invalid_email_password_combination: "Invalid email/password combination"
+    create:
+        invalid_email_password_combination: "Invalid email password combination"
+        login_success: "Login success!"
+  layouts:
+    _header:
+      home: "Home"
+      help: "Help"
+      settings: "Settings"
+      profile: "Profile"
+      login: "Login"
+      logout: "Logout"
+      users: "Users"
+      account: "Account"
   flash:
     not_found_user: "Not found user!"
     welcome_message: "Welcome to the Sample App!"
