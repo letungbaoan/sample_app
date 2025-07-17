@@ -3,7 +3,7 @@
     <%= link_to "sample app", "#", id: "logo" %>
     <div class="locale-switcher">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("languages.en"), request.params.merge(locale: :en) %> |</li>
+        <li><%= link_to t("languages.en"), request.params.merge(locale: :en) %></li>
         <li><%= link_to t("languages.vi"), request.params.merge(locale: :vi) %></li>
       </ul>
     </div>

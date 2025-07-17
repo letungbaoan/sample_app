@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
+  USER_PERMIT = %i(name email password password_confirmation birthday
+gender).freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name, presence: true,
@@ -9,6 +11,7 @@ length: {maximum: Settings.development.user.MAX_EMAIL_LENGTH},
 format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :birthday, presence: true
   validate :birthday_within_100_years
+  validates :gender, presence: true
 
   private
   def birthday_within_100_years

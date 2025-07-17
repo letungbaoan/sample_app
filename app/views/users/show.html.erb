@@ -1,0 +1,13 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= gravatar_for @user %>
+      <h1>
+        <p><strong><%= t(".name") %>:</strong> <%= @user.name %></p>
+        <p><strong><%= t(".created_at") %>:</strong> <%= l @user.created_at, format: :long %></p>
+        <p><strong><%= t(".updated_at") %>:</strong> <%= l @user.updated_at, format: :long %></p>
+      </h1>
+    </section>
+  </aside>
+</div>
