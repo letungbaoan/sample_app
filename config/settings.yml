@@ -1,0 +1,14 @@
+defaults: &defaults
+  user:
+    MAX_NAME_LENGTH: 50
+    MAX_EMAIL_LENGTH: 255
+    BIRTHDAY_YEAR_LIMIT: 100
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

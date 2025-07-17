@@ -22,3 +22,25 @@ vi:
   languages:
     en: "Tiếng Anh"
     vi: "Tiếng Việt"
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        birthday: "Ngày sinh"
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              cannot_be_in_the_future: "không thể ở trong tương lai"
+              must_be_within_100_years: "phải trong vòng 100 năm gần đây"
+  errors:
+    messages:
+      blank: "không được để trống"
+      too_long:
+        one: "quá dài (tối đa là 1 ký tự)"
+        other: "quá dài (tối đa là %{count} ký tự)"
+      too_short:
+        one: "quá ngắn (tối thiểu là 1 ký tự)"
+        other: "quá ngắn (tối thiểu là %{count} ký tự)"
