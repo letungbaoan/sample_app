@@ -88,6 +88,10 @@ input {
   }
 }
 
+.dropdown-menu.active {
+  display: block;
+}
+
 .gravatar_edit {
   margin-top: 15px;
 }
