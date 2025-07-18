@@ -19,15 +19,31 @@ vi:
       all_microposts: "Tất cả bài viết"
       no_microposts: "Chưa có bài viết nào."
       user_id_label: "(Mã người dùng: %{id})"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      login: "Đăng nhập"
+      new_user?: "Người dùng mới?"
+      sign_up_now!: "Đăng ký ngay!"
+      invalid_email_password_combination: "Tổ hợp email/mật khẩu không hợp lệ"
+  flash:
+    not_found_user: "Không tìm thấy người dùng!"
+    welcome_message: "Chào mừng đến với Sample App!"
   languages:
     en: "Tiếng Anh"
     vi: "Tiếng Việt"
   activerecord:
+    models:
+      user: "Người dùng"
     attributes:
       user:
         name: "Tên"
         email: "Email"
         birthday: "Ngày sinh"
+        password: "Mật khẩu"
+        gender: "Giới tính"
     errors:
       models:
         user:
@@ -35,6 +51,12 @@ vi:
             birthday:
               cannot_be_in_the_future: "không thể ở trong tương lai"
               must_be_within_100_years: "phải trong vòng 100 năm gần đây"
+  time:
+    formats:
+      default: "%A, %d/%m/%Y %H:%M:%S %z"
+      short: "%d/%m %H:%M"
+      long: "%H:%M ngày %d tháng %m năm %Y"
+      long_date: "Ngày %d tháng %m năm %Y"
   errors:
     messages:
       blank: "không được để trống"
@@ -44,3 +66,9 @@ vi:
       too_short:
         one: "quá ngắn (tối thiểu là 1 ký tự)"
         other: "quá ngắn (tối thiểu là %{count} ký tự)"
+  shared:
+    _error_messages:
+      error:
+        one: "lỗi"
+        other: "lỗi"
+      the_form_contains: "Biểu mẫu chứa %{count} %{error_word}"
