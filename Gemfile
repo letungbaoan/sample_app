@@ -12,8 +12,8 @@ gem "rails-i18n"
 gem "sassc-rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "bcrypt", "3.1.18"
 gem "sprockets-rails"
-
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 
