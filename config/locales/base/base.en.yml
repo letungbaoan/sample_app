@@ -27,6 +27,7 @@ en:
       login: "Log in"
       new_user?: "New user?"
       sign_up_now!: "Sign up now!"
+      remember_me_on_this_computer: "Remember me on this computer"
     create:
         invalid_email_password_combination: "Invalid email password combination"
         login_success: "Login success!"

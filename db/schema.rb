@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_07_18_032152) do
+ActiveRecord::Schema[7.0].define(version: 2025_07_21_032932) do
   create_table "microposts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_07_18_032152) do
     t.date "birthday"
     t.string "password_digest"
     t.string "gender"
+    t.string "remember_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

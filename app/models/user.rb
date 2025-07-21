@@ -3,6 +3,7 @@ class User < ApplicationRecord
   USER_PERMIT = %i(name email password password_confirmation birthday
 gender).freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  attr_accessor :remember_token
 
   validates :name, presence: true,
 length: {maximum: Settings.development.user.MAX_NAME_LENGTH}
@@ -20,6 +21,25 @@ format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
              BCrypt::Engine.cost
            end
     BCrypt::Password.create string, cost:
+  end
+
+  class << self
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
+
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def forget
+    update_column :remember_digest, nil
   end
 
   private
