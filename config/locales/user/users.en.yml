@@ -17,3 +17,7 @@ en:
       name: "Name"
       created_at: "Created at"
       updated_at: "Updated at"
+    edit:
+      edit_user: "Edit user"
+      update_your_profile: "Update your profile"
+      save_changes: "Save changes"

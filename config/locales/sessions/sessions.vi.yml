@@ -1,0 +1,13 @@
+vi:
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      login: "Đăng nhập"
+      new_user?: "Người dùng mới?"
+      sign_up_now!: "Đăng ký ngay!"
+      remember_me_on_this_computer: "Ghi nhớ tôi trên thiết bị này"
+    create:
+      invalid_email_password_combination: "Tổ hợp email/mật khẩu không hợp lệ"
+      login_success: "Đăng nhập thành công!"

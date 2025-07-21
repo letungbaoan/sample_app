@@ -17,3 +17,7 @@ vi:
       name: "Tên"
       created_at: "Thời điểm tạo"
       updated_at: "Thời điểm cập nhật"
+    edit:
+      edit_user: "Chỉnh sửa người dùng"
+      update_your_profile: "Cập nhật hồ sơ của bạn"
+      save_changes: "Lưu các thay đổi"

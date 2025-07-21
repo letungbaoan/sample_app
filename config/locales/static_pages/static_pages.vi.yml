@@ -1,0 +1,16 @@
+vi:
+  static_pages:
+    home:
+      welcome: "Chào mừng đến với Sample App"
+      tagline_html: "Đây là trang chủ của <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a> ứng dụng mẫu."
+      signup: "Đăng ký ngay!"
+      title: "Trang chủ"
+    contact:
+      title: "Liên hệ"
+      heading: "Liên hệ chúng tôi"
+      greeting: "Xin chào, %{name}!"
+      description: "Đây là trang liên hệ của ứng dụng mẫu Ruby on Rails Tutorial."
+      reach_out: "Hãy liên hệ với chúng tôi!"
+    help:
+      title: "Trợ giúp"
+      get_help_html: "Tìm trợ giúp về Ruby on Rails Tutorial tại <a href=\"http://www.railstutorial.org/help\">trang trợ giúp của Rails Tutorial</a>. Để được trợ giúp về ứng dụng mẫu này, hãy xem <a href=\"http://www.railstutorial.org/book\"><em>sách Ruby on Rails Tutorial</em></a>."

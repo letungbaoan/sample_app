@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, except: %i(new create)
+  before_action :load_user, only: %i(edit update)
 
   # GET /users/:id
   def show; end
@@ -21,12 +21,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update(user_params)
+    # Handle a successful update.
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:warning] = t(".not_found_user")
+    flash[:warning] = t "flash.not_found_user"
     redirect_to root_path
   end
 

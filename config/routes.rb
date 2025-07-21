@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
     get "/signup", to: "users#new", as: "signup"
     post "/signup", to: "users#create"
+    get "users/:id/edit", to: "users#edit", as: "edit_user"
+    patch "users/:id", to: "users#update"
     get    "login",   to: "sessions#new"
     post   "login",   to: "sessions#create"
     delete "logout",  to: "sessions#destroy"

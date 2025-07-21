@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
 
   private
   def handle_successful_login user
-    reset_session
     log_in user
     params.dig(:session, :remember_me) == "1" ? remember(user) : forget(user)
+    flash[:success] = t(".login_success")
     redirect_to user, status: :see_other
   end
 

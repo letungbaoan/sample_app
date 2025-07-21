@@ -1,36 +1,4 @@
 en:
-  static_pages:
-    home:
-      welcome: "Welcome to the Sample App"
-      tagline_html: "This is the home page for the <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a> sample application."
-      signup: "Sign up now!"
-      title: "Home"
-    contact:
-      title: "Contact"
-      heading: "Contact Us"
-      greeting: "Hello, %{name}!"
-      description: "This is the contact page for the Ruby on Rails Tutorial Sample App."
-      reach_out: "Feel free to reach out to us!"
-    help:
-      title: "Help"
-      get_help_html: "Get help on the Ruby on Rails Tutorial at the <a href=\"http://www.railstutorial.org/help\">Rails Tutorial help page</a>. To get help on this sample app, see the <a href=\"http://www.railstutorial.org/book\"><em>Ruby on Rails Tutorial</em> book</a>."
-  microposts:
-    index:
-      all_microposts: "All Microposts"
-      no_microposts: "No microposts found yet."
-      user_id_label: "(User ID: %{id})"
-  sessions:
-    new:
-      log_in: "Log in"
-      email: "Email"
-      password: "Password"
-      login: "Log in"
-      new_user?: "New user?"
-      sign_up_now!: "Sign up now!"
-      remember_me_on_this_computer: "Remember me on this computer"
-    create:
-        invalid_email_password_combination: "Invalid email password combination"
-        login_success: "Login success!"
   layouts:
     _header:
       home: "Home"

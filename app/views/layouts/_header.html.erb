@@ -20,7 +20,7 @@
           <% end %>
           <ul class="dropdown-menu" id="dropdown-menu">
             <li><%= link_to t("layouts._header.profile"), current_user %></li>
-            <li><%= link_to t("layouts._header.settings"), '#' %></li>
+            <li><%= link_to t("layouts._header.settings"), eidt_user_path(current_user) %></li>
             <li class="divider"></li>
             <li> <%= link_to t("layouts._header.logout"), logout_path, data: { "turbo-method": :delete } %></li>
           </ul>
