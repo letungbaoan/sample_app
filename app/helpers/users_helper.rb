@@ -7,9 +7,9 @@ module UsersHelper
 
   def gender_options_for_select
     [
-      [t(".gender_female"), :female],
-      [t(".gender_male"), :male],
-      [t(".gender_other"), :other]
+      [t("users._form.gender_female"), :female],
+      [t("users._form.gender_male"), :male],
+      [t("users._form.gender_other"), :other]
     ]
   end
 end

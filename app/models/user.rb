@@ -13,6 +13,8 @@ format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :birthday, presence: true
   validate :birthday_within_100_years
   validates :gender, presence: true
+  validates :password, presence: true,
+length: {minimum: Settings.development.digits.digit_6}, allow_nil: true
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost

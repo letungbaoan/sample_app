@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(edit update)
-
+  before_action :load_user, except: %i(new create)
+  before_action :logged_in_user, only: %i(edit update)
+  before_action :correct_user, only: %i(edit update)
   # GET /users/:id
   def show; end
 
@@ -25,7 +26,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-    # Handle a successful update.
+      flash[:success] = t("flash.profile_updated")
+      redirect_to @user
     else
       render :edit, status: :unprocessable_entity
     end
@@ -42,5 +44,19 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USER_PERMIT
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    flash[:danger] = t("flash.please_log_in")
+    redirect_to login_url
+  end
+
+  def correct_user
+    return if @user == current_user
+
+    flash[:danger] = t("flash.cannot_edit_another_user")
+    redirect_to root_url
   end
 end

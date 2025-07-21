@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get "help",   to: "static_pages#help"
 
     get "/signup", to: "users#new", as: "signup"
-    post "/signup", to: "users#create"
+    post "/signup", to: "users#create", as: "users"
     get "users/:id/edit", to: "users#edit", as: "edit_user"
     patch "users/:id", to: "users#update"
     get    "login",   to: "sessions#new"

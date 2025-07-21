@@ -1,18 +1,19 @@
 en:
   users:
-    new:
-      sign_up: "Sign up"
+    _form:
       name: "Name"
       email: "Email"
       password: "Password"
       confirmation: "Confirmation"
-      create_my_account: "Created my account"
       birthday: "Birthday"
       gender: "Gender"
       gender_female: "Female"
       gender_male: "Male"
       gender_other: "Other"
       gender_select_placeholder: "Select your gender"
+    new:
+      sign_up: "Sign up"
+      create_my_account: "Created my account"
     show:
       name: "Name"
       created_at: "Created at"

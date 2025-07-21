@@ -1,18 +1,19 @@
 vi:
   users:
-    new:
+    _form:
       name: "Tên"
       email: "Email"
       password: "Mật khẩu"
       confirmation: "Xác nhận mật khẩu"
-      sign_up: "Đăng ký"
-      create_my_account: "Tạo tài khoản của tôi"
       birthday: "Ngày sinh"
       gender: "Giới tính"
       gender_female: "Nữ"
       gender_male: "Nam"
       gender_other: "Khác"
       gender_select_placeholder: "Chọn giới tính"
+    new:
+      create_my_account: "Tạo tài khoản của tôi"
+      sign_up: "Đăng ký"
     show:
       name: "Tên"
       created_at: "Thời điểm tạo"

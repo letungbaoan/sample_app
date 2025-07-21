@@ -12,6 +12,9 @@ en:
   flash:
     not_found_user: "Not found user!"
     welcome_message: "Welcome to the Sample App!"
+    profile_updated: "Profile updated!"
+    please_log_in: "Please log in to continue"
+    cannot_edit_another_user: "You cannot edit another user's profile!"
   languages:
     en: "English"
     vi: "Tiếng Việt"
@@ -25,6 +28,7 @@ en:
         birthday: "Birthday"
         password: "Password"
         gender: "Gender"
+        password_confirmation: "Password confirmation"
     errors:
       models:
         user:
@@ -47,6 +51,7 @@ en:
       too_short:
         one: "is too short (minimum is 1 character)"
         other: "is too short (minimum is %{count} characters)"
+      confirmation: "doesn't match the password"
   shared:
     _error_messages:
       error:
