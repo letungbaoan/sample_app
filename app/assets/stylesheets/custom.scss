@@ -49,6 +49,15 @@ input {
 
 
 /* -------------------- ID Styles -------------------- */
+#error_explanation {
+  color: red;
+
+  ul {
+    color: red;
+    margin: 0 0 30px;
+  }
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -65,13 +74,9 @@ input {
   }
 }
 
-#error_explanation {
-  color: red;
-
-  ul {
-    color: red;
-    margin: 0 0 30px;
-  }
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
 }
 
 
@@ -85,6 +90,16 @@ input {
 
   h1 {
     margin-bottom: 10px;
+  }
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+  span {
+    font-weight: normal;
+    margin-left: 20px;
   }
 }
 
