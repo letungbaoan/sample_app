@@ -1,15 +1,19 @@
 class UsersController < ApplicationController
   before_action :load_user, except: %i(new create)
 
+  # GET /users/:id
   def show; end
 
+  # GET /signup
   def new
     @user = User.new
   end
 
+  # POST /signup
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t "flash.welcome_message"
       redirect_to @user, status: :see_other
     else

@@ -27,7 +27,19 @@ vi:
       login: "Đăng nhập"
       new_user?: "Người dùng mới?"
       sign_up_now!: "Đăng ký ngay!"
+    create:
       invalid_email_password_combination: "Tổ hợp email/mật khẩu không hợp lệ"
+      login_success: "Đăng nhập thành công!"
+  layouts:
+    _header:
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      settings: "Cài đặt"
+      profile: "Hồ sơ"
+      logout: "Đăng xuất"
+      login: "Đăng nhập"
+      users: "Người dùng"
+      account: "Tài khoản"
   flash:
     not_found_user: "Không tìm thấy người dùng!"
     welcome_message: "Chào mừng đến với Sample App!"

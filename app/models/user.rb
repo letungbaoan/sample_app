@@ -13,6 +13,15 @@ format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validate :birthday_within_100_years
   validates :gender, presence: true
 
+  def self.digest string
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create string, cost:
+  end
+
   private
   def birthday_within_100_years
     return if birthday.blank? || !birthday.is_a?(Date)
