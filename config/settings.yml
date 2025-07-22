@@ -3,6 +3,14 @@ defaults: &defaults
     MAX_NAME_LENGTH: 50
     MAX_EMAIL_LENGTH: 255
     BIRTHDAY_YEAR_LIMIT: 100
+  digits:
+    DIGIT_6: 6
+  external_links:
+    gravatar_email: "http://gravatar.com/emails"
+    rails_tutorial:
+      book_page: "http://www.railstutorial.org/book"
+      help_page: "http://www.railstutorial.org/help"
+      homepage: "http://www.railstutorial.org/"
 
 development:
   <<: *defaults

@@ -1,6 +1,8 @@
 <% provide :title, t(".title") %>
 <div class="center jumbotron">
   <h1><%= t(".welcome") %></h1>
-  <h2><%= t(".tagline_html") %></h2>
-  <%= link_to t(".signup"), "#", class: "btn btn-lg btn-primary" %>
+  <h2><%= t(".tagline_html", homepage_url: Settings.development.external_links.rails_tutorial.homepage).html_safe %></h2>
+  <% unless logged_in? %>
+    <%= link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>

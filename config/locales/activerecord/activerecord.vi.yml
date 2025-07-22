@@ -1,0 +1,21 @@
+vi:
+  activerecord:
+    attributes:
+      user:
+        birthday: "Ngày sinh"
+        email: "Email"
+        gender: "Giới tính"
+        name: "Tên"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu xác nhận"
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              cannot_be_in_the_future: "không thể ở trong tương lai"
+              must_be_within_100_years: "phải trong vòng 100 năm gần đây"
+            gender:
+              inclusion: "không phải là giới tính hợp lệ (phải là nam, nữ, hoặc khác)"
+    models:
+      user: "Người dùng"

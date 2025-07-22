@@ -1,0 +1,6 @@
+vi:
+  microposts:
+    index:
+      all_microposts: "Tất cả bài viết"
+      no_microposts: "Chưa có bài viết nào."
+      user_id_label: "(Mã người dùng: %{id})"

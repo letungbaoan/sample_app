@@ -1,0 +1,6 @@
+en:
+  microposts:
+    index:
+      all_microposts: "All Microposts"
+      no_microposts: "No microposts found yet."
+      user_id_label: "(User ID: %{id})"

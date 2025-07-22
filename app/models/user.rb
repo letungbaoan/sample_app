@@ -5,6 +5,10 @@ gender).freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   attr_accessor :remember_token
 
+  enum gender: {male: 0, female: 1, other: 2}
+
+  scope :recent, ->{order(created_at: :desc)}
+
   validates :name, presence: true,
 length: {maximum: Settings.development.user.MAX_NAME_LENGTH}
   validates :email, presence: true,
@@ -13,6 +17,9 @@ format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :birthday, presence: true
   validate :birthday_within_100_years
   validates :gender, presence: true
+  validates :gender, inclusion: {in: genders.keys}, allow_blank: true
+  validates :password, presence: true,
+length: {minimum: Settings.development.digits.DIGIT_6}, allow_nil: true
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost
@@ -35,7 +42,13 @@ format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   end
 
   def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    return false if remember_digest.nil?
+
+    begin
+      BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    rescue BCrypt::Errors::InvalidHash
+      false
+    end
   end
 
   def forget

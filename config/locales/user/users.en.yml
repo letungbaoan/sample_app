@@ -1,19 +1,37 @@
 en:
   users:
-    new:
-      sign_up: "Sign up"
-      name: "Name"
-      email: "Email"
-      password: "Password"
-      confirmation: "Confirmation"
-      create_my_account: "Created my account"
+    _form:
       birthday: "Birthday"
+      confirmation: "Confirmation"
+      email: "Email"
       gender: "Gender"
       gender_female: "Female"
       gender_male: "Male"
       gender_other: "Other"
       gender_select_placeholder: "Select your gender"
-    show:
       name: "Name"
+      password: "Password"
+    create:
+       welcome_message: "Welcome to the Sample App!"
+    destroy:
+      delete_failed: "Delete user failed!"
+      user_deleted: "User deleted!"
+    edit:
+      change: "Change"
+      edit_user: "Edit user"
+      save_changes: "Save changes"
+      update_your_profile: "Update your profile"
+    index:
+      all_users: "All users"
+    new:
+      create_my_account: "Created my account"
+      sign_up: "Sign up"
+    show:
       created_at: "Created at"
+      name: "Name"
       updated_at: "Updated at"
+    user:
+      delete: "Delete"
+      you_sure: "Are you sure?"
+    update:
+      profile_updated: "Profile updated!"

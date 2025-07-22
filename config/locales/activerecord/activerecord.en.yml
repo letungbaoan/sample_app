@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        birthday: "Birthday"
+        email: "Email"
+        gender: "Gender"
+        name: "Name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              cannot_be_in_the_future: "cannot be in the future"
+              must_be_within_100_years: "must be within the last 100 years"
+            gender:
+              inclusion: "not a valid gender (must be male, female or other)"
+    models:
+      user: "User"
