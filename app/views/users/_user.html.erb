@@ -1,0 +1,7 @@
+<li>
+  <%= gravatar_for user %>
+  <%= link_to user.name, user %>
+  <% if can_delete_user?(user) %>
+  | <%= link_to t(".delete"), user, data: {"turbo-method": :delete, turbo_confirm: t(".you_sure")} %>
+  <% end %>
+</li>

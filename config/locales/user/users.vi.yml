@@ -1,19 +1,37 @@
 vi:
   users:
-    new:
-      name: "Tên"
-      email: "Email"
-      password: "Mật khẩu"
-      confirmation: "Xác nhận mật khẩu"
-      sign_up: "Đăng ký"
-      create_my_account: "Tạo tài khoản của tôi"
+    _form:
       birthday: "Ngày sinh"
+      confirmation: "Xác nhận mật khẩu"
+      email: "Email"
       gender: "Giới tính"
       gender_female: "Nữ"
       gender_male: "Nam"
       gender_other: "Khác"
       gender_select_placeholder: "Chọn giới tính"
-    show:
       name: "Tên"
+      password: "Mật khẩu"
+    create:
+      welcome_message: "Chào mừng đến với Sample App!"
+    destroy:
+      delete_failed: "Xóa người dùng thất bại!"
+      user_deleted: "Đã xóa người dùng!"
+    edit:
+      change: "Thay đổi"
+      edit_user: "Chỉnh sửa người dùng"
+      save_changes: "Lưu các thay đổi"
+      update_your_profile: "Cập nhật hồ sơ của bạn"
+    index:
+      all_users: "Tất cả người dùng"
+    new:
+      create_my_account: "Tạo tài khoản của tôi"
+      sign_up: "Đăng ký"
+    show:
       created_at: "Thời điểm tạo"
+      name: "Tên"
       updated_at: "Thời điểm cập nhật"
+    user:
+      delete: "Xóa"
+      you_sure: "Bạn có chắc không?"
+    update:
+      profile_updated: "Đã cập nhật hồ sơ!"

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_action :logged_out_user, only: %i(new create)
   REMEMBER_ME_CONSTANT = "1".freeze
 
   # GET /login
@@ -17,20 +18,22 @@ class SessionsController < ApplicationController
   # DELETE /logout
   def destroy
     log_out
+    reset_session
     redirect_to root_url, status: :see_other
   end
 
   private
   def handle_successful_login user
+    forwarding_url = session[:forwarding_url]
     reset_session
     log_in user
     if params.dig(:session,
                   :remember_me) == REMEMBER_ME_CONSTANT
-      remember(user)
+      remember_cookies(user)
     else
-      forget(user)
+      remember_session(user)
     end
-    redirect_to user, status: :see_other
+    redirect_to forwarding_url || user
   end
 
   def handle_failed_login

@@ -1,87 +1,42 @@
 en:
-  static_pages:
-    home:
-      welcome: "Welcome to the Sample App"
-      tagline_html: "This is the home page for the <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a> sample application."
-      signup: "Sign up now!"
-      title: "Home"
-    contact:
-      title: "Contact"
-      heading: "Contact Us"
-      greeting: "Hello, %{name}!"
-      description: "This is the contact page for the Ruby on Rails Tutorial Sample App."
-      reach_out: "Feel free to reach out to us!"
-    help:
-      title: "Help"
-      get_help_html: "Get help on the Ruby on Rails Tutorial at the <a href=\"http://www.railstutorial.org/help\">Rails Tutorial help page</a>. To get help on this sample app, see the <a href=\"http://www.railstutorial.org/book\"><em>Ruby on Rails Tutorial</em> book</a>."
-  microposts:
-    index:
-      all_microposts: "All Microposts"
-      no_microposts: "No microposts found yet."
-      user_id_label: "(User ID: %{id})"
-  sessions:
-    new:
-      log_in: "Log in"
-      email: "Email"
-      password: "Password"
-      login: "Log in"
-      new_user?: "New user?"
-      sign_up_now!: "Sign up now!"
-      remember_me_on_this_computer: "Remember me on this computer"
-    create:
-        invalid_email_password_combination: "Invalid email password combination"
-        login_success: "Login success!"
-  layouts:
-    _header:
-      home: "Home"
-      help: "Help"
-      settings: "Settings"
-      profile: "Profile"
-      login: "Login"
-      logout: "Logout"
-      users: "Users"
-      account: "Account"
-  flash:
-    not_found_user: "Not found user!"
-    welcome_message: "Welcome to the Sample App!"
-  languages:
-    en: "English"
-    vi: "Tiếng Việt"
-  activerecord:
-    models:
-      user: "User"
-    attributes:
-      user:
-        name: "Name"
-        email: "Email"
-        birthday: "Birthday"
-        password: "Password"
-        gender: "Gender"
-    errors:
-      models:
-        user:
-          attributes:
-            birthday:
-              cannot_be_in_the_future: "cannot be in the future"
-              must_be_within_100_years: "must be within the last 100 years"
-  time:
-    formats:
-      default: "%a, %d %b %Y %H:%M:%S %z"
-      short: "%d %b %H:%M"
-      long: "%B %d, %Y %H:%M"
-      long_date: "%B %d, %Y"
   errors:
     messages:
       blank: "can't be blank"
+      confirmation: "doesn't match the password"
       too_long:
         one: "is too long (maximum is 1 character)"
         other: "is too long (maximum is %{count} characters)"
       too_short:
         one: "is too short (minimum is 1 character)"
         other: "is too short (minimum is %{count} characters)"
+  flash:
+    already_logged_in: "Already logged in!"
+    cannot_edit_another_user: "You cannot edit another user's profile!"
+    not_authorized: "You are not authorized to perform this action!"
+    not_found_user: "Not found user!"
+    please_log_in: "Please log in to continue"
+  languages:
+    en: "English"
+    vi: "Tiếng Việt"
+  layouts:
+    _header:
+      account: "Account"
+      help: "Help"
+      home: "Home"
+      login: "Login"
+      logout: "Logout"
+      profile: "Profile"
+      settings: "Settings"
+      users: "Users"
   shared:
     _error_messages:
       error:
         one: "error"
         other: "errors"
       the_form_contains: "The form contains %{count} %{error_word}"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      long_date: "%B %d, %Y"
+      short: "%d %b %H:%M"
