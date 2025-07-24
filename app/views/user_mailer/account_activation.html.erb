@@ -1,0 +1,11 @@
+<p><%= t("user_mailer.greeting", name: @user.name) %></p>
+
+<p><%= t("user_mailer.account_activation.welcome_message") %></p>
+
+<p>
+  <%= link_to t("user_mailer.account_activation.activation_link_text"),
+              edit_account_activation_url(id: @user.activation_token, email: @user.email) %>
+</p>
+
+<p><%= t("user_mailer.account_activation.regards") %></p>
+<p><%= t("user_mailer.account_activation.app_name") %></p>

@@ -12,6 +12,7 @@ vi:
       name: "Tên"
       password: "Mật khẩu"
     create:
+      check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
       welcome_message: "Chào mừng đến với Sample App!"
     destroy:
       delete_failed: "Xóa người dùng thất bại!"
@@ -35,3 +36,4 @@ vi:
       you_sure: "Bạn có chắc không?"
     update:
       profile_updated: "Đã cập nhật hồ sơ!"
+      delete: "Xóa"

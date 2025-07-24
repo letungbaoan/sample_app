@@ -1,0 +1,9 @@
+vi:
+  user_mailer:
+    greeting: "Xin chào %{name},"
+    account_activation:
+      welcome_message: "Chào mừng bạn đến với Sample App! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+      activate_button: "Kích hoạt tài khoản"
+      regards: "Trân trọng,"
+      app_name: "Ứng dụng mẫu"
+      subject: "Kích hoạt tài khoản"

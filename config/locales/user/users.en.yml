@@ -12,7 +12,8 @@ en:
       name: "Name"
       password: "Password"
     create:
-       welcome_message: "Welcome to the Sample App!"
+      check_email_for_activation: "Please check your email to activate your account."
+      welcome_message: "Welcome to the Sample App!"
     destroy:
       delete_failed: "Delete user failed!"
       user_deleted: "User deleted!"
@@ -35,3 +36,4 @@ en:
       you_sure: "Are you sure?"
     update:
       profile_updated: "Profile updated!"
+      delete: "Delete"
