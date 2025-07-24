@@ -1,18 +1,11 @@
 vi:
   users:
     _form:
-      birthday: "Ngày sinh"
-      confirmation: "Xác nhận mật khẩu"
-      email: "Email"
-      gender: "Giới tính"
       gender_female: "Nữ"
       gender_male: "Nam"
       gender_other: "Khác"
       gender_select_placeholder: "Chọn giới tính"
-      name: "Tên"
-      password: "Mật khẩu"
     create:
-      check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
       welcome_message: "Chào mừng đến với Sample App!"
     destroy:
       delete_failed: "Xóa người dùng thất bại!"

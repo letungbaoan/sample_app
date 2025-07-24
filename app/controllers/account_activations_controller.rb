@@ -1,6 +1,7 @@
 class AccountActivationsController < ApplicationController
   before_action :load_user_for_activation, only: [:edit]
 
+  # GET /account_activations/:id/edit
   def edit
     if user_can_be_activated?(@user)
       activate_and_log_in_user(@user)

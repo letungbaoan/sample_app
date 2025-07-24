@@ -3,11 +3,13 @@ class User < ApplicationRecord
 
   USER_PERMIT = %i(name email password password_confirmation birthday
 gender).freeze
+  PASSWORD_RESET_PERMIT = %i(password password_confirmation).freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  PASSWORD_RESET_EXPIRATION_TIME = 2.hours
 
   enum gender: {male: 0, female: 1, other: 2}
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -45,6 +47,16 @@ length: {minimum: Settings.development.digits.DIGIT_6}, allow_nil: true
     update_columns activated: true, activated_at: Time.zone.now
   end
 
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
@@ -67,6 +79,10 @@ length: {minimum: Settings.development.digits.DIGIT_6}, allow_nil: true
 
   def forget
     update_column :remember_digest, nil
+  end
+
+  def password_reset_expired?
+    reset_sent_at < PASSWORD_RESET_EXPIRATION_TIME.ago
   end
 
   private

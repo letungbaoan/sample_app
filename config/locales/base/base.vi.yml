@@ -13,6 +13,8 @@ vi:
     account_not_activated: "Tàì khoản chưa được kích hoạt. Vui lòng kiểm tra email của bạn để nhận liên kết kích hoạt."
     already_logged_in: "Bạn đã đăng nhập rồi!"
     cannot_edit_another_user: "Bạn không thể chỉnh sửa hồ sơ của người dùng khác!"
+    check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
+    invalid_activation_link: "Liên kết kích hoạt không hợp lệ."
     not_authorized: "Bạn không được phép thực hiện hành động này!"
     not_found_user: "Không tìm thấy người dùng!"
     please_log_in: "Vui lòng đăng nhập để tiếp tục"

@@ -5,6 +5,7 @@ vi:
       login_success: "Đăng nhập thành công!"
     new:
       email: "Email"
+      forgot_password: "Quên mật khẩu?"
       log_in: "Đăng nhập"
       login: "Đăng nhập"
       new_user?: "Người dùng mới?"

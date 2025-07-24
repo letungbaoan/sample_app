@@ -2,8 +2,15 @@ vi:
   user_mailer:
     greeting: "Xin chào %{name},"
     account_activation:
+      activation_link_text: "Bấm vào đây để kích hoạt tài khoản"
       welcome_message: "Chào mừng bạn đến với Sample App! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
       activate_button: "Kích hoạt tài khoản"
       regards: "Trân trọng,"
       app_name: "Ứng dụng mẫu"
       subject: "Kích hoạt tài khoản"
+    password_reset:
+      reset_password: "Đặt lại mật khẩu"
+      intro: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết dưới đây:"
+      expiration_notice: "Liên kết này sẽ hết hạn trong hai giờ."
+      ignore_email: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."
+      subject: "Thiết lập lại mật khẩu"

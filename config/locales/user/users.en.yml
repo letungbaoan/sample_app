@@ -1,18 +1,11 @@
 en:
   users:
     _form:
-      birthday: "Birthday"
-      confirmation: "Confirmation"
-      email: "Email"
-      gender: "Gender"
       gender_female: "Female"
       gender_male: "Male"
       gender_other: "Other"
       gender_select_placeholder: "Select your gender"
-      name: "Name"
-      password: "Password"
     create:
-      check_email_for_activation: "Please check your email to activate your account."
       welcome_message: "Welcome to the Sample App!"
     destroy:
       delete_failed: "Delete user failed!"
