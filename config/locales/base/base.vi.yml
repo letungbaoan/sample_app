@@ -10,6 +10,7 @@ vi:
         one: "quá ngắn (tối thiểu là 1 ký tự)"
         other: "quá ngắn (tối thiểu là %{count} ký tự)"
   flash:
+    account_not_activated: "Tàì khoản chưa được kích hoạt. Vui lòng kiểm tra email của bạn để nhận liên kết kích hoạt."
     already_logged_in: "Bạn đã đăng nhập rồi!"
     cannot_edit_another_user: "Bạn không thể chỉnh sửa hồ sơ của người dùng khác!"
     not_authorized: "Bạn không được phép thực hiện hành động này!"

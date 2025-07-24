@@ -24,16 +24,21 @@ class SessionsController < ApplicationController
 
   private
   def handle_successful_login user
-    forwarding_url = session[:forwarding_url]
-    reset_session
-    log_in user
-    if params.dig(:session,
-                  :remember_me) == REMEMBER_ME_CONSTANT
-      remember_cookies(user)
+    if user.activated?
+      forwarding_url = session[:forwarding_url]
+      reset_session
+      if params.dig(:session,
+                    :remember_me) == REMEMBER_ME_CONSTANT
+        remember_cookies(user)
+      else
+        remember_session(user)
+      end
+      log_in user
+      redirect_to forwarding_url || user
     else
-      remember_session(user)
+      flash[:warning] = t("flash.account_not_activated")
+      redirect_to root_url, status: :see_other
     end
-    redirect_to forwarding_url || user
   end
 
   def handle_failed_login

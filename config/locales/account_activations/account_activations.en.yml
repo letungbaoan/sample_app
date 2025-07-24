@@ -1,0 +1,4 @@
+en:
+  account_activations:
+    account_activated: "Account activated!"
+    invalid_activation_link: "Invalid activation link."

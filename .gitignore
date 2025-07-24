@@ -31,3 +31,6 @@
 /config/master.key
 /config/database.yml
 /test/*
+
+# Ignore application configuration
+/config/application.yml

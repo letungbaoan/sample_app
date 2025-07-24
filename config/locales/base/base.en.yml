@@ -10,6 +10,7 @@ en:
         one: "is too short (minimum is 1 character)"
         other: "is too short (minimum is %{count} characters)"
   flash:
+    account_not_activated: "Account not activated. Check your email for the activation link."
     already_logged_in: "Already logged in!"
     cannot_edit_another_user: "You cannot edit another user's profile!"
     not_authorized: "You are not authorized to perform this action!"
