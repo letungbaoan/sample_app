@@ -13,6 +13,8 @@ en:
     account_not_activated: "Account not activated. Check your email for the activation link."
     already_logged_in: "Already logged in!"
     cannot_edit_another_user: "You cannot edit another user's profile!"
+    check_email_for_activation: "Please check your email to activate your account."
+    invalid_activation_link: "Invalid activation link."
     not_authorized: "You are not authorized to perform this action!"
     not_found_user: "Not found user!"
     please_log_in: "Please log in to continue"

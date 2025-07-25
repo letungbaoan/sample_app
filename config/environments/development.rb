@@ -43,8 +43,8 @@ Rails.application.configure do
 
 # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    address: ENV['SMTP_ADDRESS'],
-    port: ENV['SMTP_PORT'],
+    address: ENV["SMTP_ADDRESS"],
+    port: ENV["SMTP_PORT"],
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"],
     authentication: "plain",

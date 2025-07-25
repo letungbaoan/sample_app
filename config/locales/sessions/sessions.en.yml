@@ -5,6 +5,7 @@ en:
       login_success: "Login success!"
     new:
       email: "Email"
+      forgot_password: "Forgot password?"
       log_in: "Log in"
       login: "Log in"
       new_user?: "New user?"

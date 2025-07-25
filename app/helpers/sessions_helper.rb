@@ -61,7 +61,6 @@ module SessionsHelper
 
     return unless user&.authenticated?(:remember, cookies[:remember_token])
 
-    log_in user
     user
   end
 end

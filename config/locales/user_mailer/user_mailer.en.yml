@@ -2,8 +2,15 @@ en:
   user_mailer:
     greeting: "Hi %{name},"
     account_activation:
+      activation_link_text: "Click here to activate your account"
       welcome_message: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate_button: "Activate Account"
       regards: "Regards,"
       app_name: "Sample App"
       subject: "Account activation"
+    password_reset:
+      reset_password: "Reset password"
+      intro: "To reset your password click the link below:"
+      ignore_email: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      expiration_notice: "This link will expire in two hours."
+      subject: "Password reset"
