@@ -1,15 +1,8 @@
 // Imports
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-// Variables and Mixins
-$light-gray: #777;
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "variables";
+@import "mixins";
 
 /* -------------------- Universal Styles -------------------- */
 body {
@@ -33,6 +26,10 @@ h1 {
   text-align: left;
 }
 
+input {
+  height: auto !important;
+}
+
 input,
 textarea,
 select,
@@ -41,10 +38,6 @@ select,
   margin-bottom: 15px;
   width: 100%;
   @include box_sizing;
-}
-
-input {
-  height: auto !important;
 }
 
 
@@ -81,10 +74,6 @@ input {
 
 
 /* -------------------- Class Styles -------------------- */
-.navbar {
-  height: 40px;
-}
-
 .center {
   text-align: center;
 
@@ -109,6 +98,7 @@ input {
 
 .field_with_errors {
   @extend .has-error;
+
   .form-control {
     color: $state-danger-text;
   }
@@ -123,6 +113,10 @@ input {
   margin-top: 15px;
 }
 
+.navbar {
+  height: 40px;
+}
+
 .users {
   list-style: none;
   margin: 0;
@@ -133,6 +127,7 @@ input {
     padding: 10px 0;
   }
 }
+
 
 /* -------------------- Specific Component/Context Styles -------------------- */
 aside {
@@ -155,17 +150,30 @@ aside {
     line-height: 1;
     margin-bottom: 3px;
   }
+
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+
+  input {
+    border: 0;
+  }
 }
 
 .user_info h1 {
   margin-bottom: 0;
   margin-top: 0;
   overflow: hidden;
-}
 
-.user_info h1 p {
-  line-height: 1.2;
-  margin-bottom: 5px;
-  margin-top: 0;
-  padding-left: 0;
+  p {
+    line-height: 1.2;
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-left: 0;
+  }
 }

@@ -1,6 +1,15 @@
 vi:
   microposts:
-    index:
-      all_microposts: "Tất cả bài viết"
-      no_microposts: "Chưa có bài viết nào."
-      user_id_label: "(Mã người dùng: %{id})"
+    micropost:
+      posted: "Đăng cách đây %{time_ago}."
+      delete: "Xóa"
+      you_sure: "Bạn có chắc không?"
+    micropost_not_found_or_invalid: "Bài viết không hợp lệ hoặc không tìm thấy."
+    must_be_a_valid_image_format: "phải là định dạng ảnh hợp lệ"
+    image_size_too_large: "phải nhỏ hơn %{max_size}MB"
+    image_size_alert: "Kích thước tệp tối đa là %{max_size}. Vui lòng chọn tệp nhỏ hơn."
+    create:
+      micropost_created: "Đã tạo bài viết nhỏ!"
+    destroy:
+      micropost_deleted_success: "Bài viết đã được xóa"
+      micropost_deleted_fail: "Xóa bài viết thất bại"

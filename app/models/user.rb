@@ -11,10 +11,12 @@ gender).freeze
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  has_many :microposts, dependent: :destroy
+
   before_save :downcase_email
   before_create :create_activation_digest
 
-  scope :recent, ->{order(created_at: :desc)}
+  scope :recent, -> {order(created_at: :desc)}
 
   validates :name, presence: true,
 length: {maximum: Settings.development.user.MAX_NAME_LENGTH}

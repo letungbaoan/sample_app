@@ -32,11 +32,18 @@ vi:
       settings: "Cài đặt"
       users: "Người dùng"
   shared:
-    _error_messages:
+    error_messages:
       error:
         one: "lỗi"
         other: "lỗi"
       the_form_contains: "Biểu mẫu chứa %{count} %{error_word}"
+    user_info:
+      view_my_profile: "Xem hồ sơ của tôi"
+      micropost_singular: "bài viết nhỏ"
+      micropost_plural: "bài viết nhỏ"
+    micropost_form:
+      micropost_placeholder: "Soạn bài viết mới..."
+      post_button: "Đăng bài"
   time:
     formats:
       default: "%A, %d/%m/%Y %H:%M:%S %z"

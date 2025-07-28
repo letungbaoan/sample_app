@@ -13,4 +13,5 @@ vi:
       signup: "Đăng ký ngay!"
       tagline_html: "Đây là trang chủ của <a href=\"%{homepage_url}\">Ruby on Rails Tutorial</a> ứng dụng mẫu."
       title: "Trang chủ"
+      micropost_feed_heading: "Dòng bài viết nhỏ"
       welcome: "Chào mừng đến với Sample App"

@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github){|repo| "https://github.com/#{repo}.git"}
+git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
 ruby "3.2.2"
 
@@ -11,6 +11,9 @@ gem "faker", "2.21.0"
 
 gem "figaro"
 
+gem "active_storage_validations", "0.9.8"
+gem "i18n-js"
+gem "image_processing", "1.12.2"
 gem "pagy"
 gem "rails", "~> 7.0.5"
 gem "rails-i18n"
