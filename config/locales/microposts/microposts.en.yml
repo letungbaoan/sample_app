@@ -1,6 +1,15 @@
 en:
   microposts:
-    index:
-      all_microposts: "All Microposts"
-      no_microposts: "No microposts found yet."
-      user_id_label: "(User ID: %{id})"
+    micropost:
+      posted: "Posted %{time_ago} ago."
+      delete: "Delete"
+      you_sure: "Are you sure?"
+    micropost_not_found_or_invalid: "Micropost not found or invalid."
+    must_be_a_valid_image_format: "must be a valid image format"
+    image_size_too_large: "should be less than %{max_size}MB"
+    image_size_alert: "Maximum file size is %{max_size}. Please choose a smaller file."
+    create:
+      micropost_created: "Micropost created!"
+    destroy:
+      micropost_deleted_success: "Micropost deleted"
+      micropost_deleted_fail: "Micropost deletion failed"

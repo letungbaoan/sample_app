@@ -22,6 +22,7 @@ en:
       sign_up: "Sign up"
     show:
       created_at: "Created at"
+      microposts_heading: "Microposts (%{count})"
       name: "Name"
       updated_at: "Updated at"
     user:

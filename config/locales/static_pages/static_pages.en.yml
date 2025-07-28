@@ -13,4 +13,5 @@ en:
       signup: "Sign up now!"
       tagline_html: "This is the home page for the <a href=\"%{homepage_url}\">Ruby on Rails Tutorial</a> sample application."
       title: "Home"
+      micropost_feed_heading: "Micropost Feed"
       welcome: "Welcome"

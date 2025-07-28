@@ -22,6 +22,7 @@ vi:
       sign_up: "Đăng ký"
     show:
       created_at: "Thời điểm tạo"
+      microposts_heading: "Bài viết nhỏ (%{count})"
       name: "Tên"
       updated_at: "Thời điểm cập nhật"
     user:

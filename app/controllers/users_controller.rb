@@ -6,7 +6,10 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts.newest,
+                              limit: Settings.development.pagy.page_10
+  end
 
   # GET /signup
   def new
@@ -50,7 +53,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @pagy, @users = pagy User.recent
+    @pagy, @users = pagy User.recent, limit: Settings.development.pagy.page_10
   end
 
   private
@@ -64,14 +67,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USER_PERMIT
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t("flash.please_log_in")
-    redirect_to login_url
   end
 
   def logged_out_user

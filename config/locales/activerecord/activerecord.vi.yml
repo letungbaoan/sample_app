@@ -8,6 +8,9 @@ vi:
         name: "Tên"
         password: "Mật khẩu"
         password_confirmation: "Mật khẩu xác nhận"
+      micropost:
+        content: "Nội dung"
+        image: "Hình ảnh"
     errors:
       models:
         user:
@@ -17,5 +20,10 @@ vi:
               must_be_within_100_years: "phải trong vòng 100 năm gần đây"
             gender:
               inclusion: "không phải là giới tính hợp lệ (phải là nam, nữ, hoặc khác)"
+        micropost:
+          attributes:
+            image:
+              invalid_image_format: "phải là định dạng ảnh hợp lệ (JPEG, GIF, hoặc PNG)"
+              image_size_too_large: "phải nhỏ hơn %{max_size}"
     models:
       user: "Người dùng"

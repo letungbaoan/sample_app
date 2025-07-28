@@ -5,6 +5,7 @@ defaults: &defaults
     BIRTHDAY_YEAR_LIMIT: 100
   digits:
     DIGIT_6: 6
+    DIGIT_140: 140
   external_links:
     gravatar_email: "http://gravatar.com/emails"
     rails_tutorial:
@@ -13,6 +14,10 @@ defaults: &defaults
       homepage: "http://www.railstutorial.org/"
   mailer:
     default_from_email: "noreply@example.com"
+  pagy:
+    page_10: 10
+  image_settings:
+    allowed_image_types: "image/jpeg,image/gif,image/png"
 
 development:
   <<: *defaults
