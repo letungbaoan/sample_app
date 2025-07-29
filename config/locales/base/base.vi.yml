@@ -44,6 +44,9 @@ vi:
     micropost_form:
       micropost_placeholder: "Soạn bài viết mới..."
       post_button: "Đăng bài"
+    stats:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"
   time:
     formats:
       default: "%A, %d/%m/%Y %H:%M:%S %z"
