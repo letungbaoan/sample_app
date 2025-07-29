@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
 
+  DEFAULT_INCLUDES_FOR_FEED = [:user, {image_attachment: :blob}].freeze
   USER_PERMIT = %i(name email password password_confirmation birthday
 gender).freeze
   PASSWORD_RESET_PERMIT = %i(password password_confirmation).freeze
@@ -12,11 +13,18 @@ gender).freeze
   attr_accessor :remember_token, :activation_token, :reset_token
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   before_save :downcase_email
   before_create :create_activation_digest
 
   scope :recent, -> {order(created_at: :desc)}
+  scope :relate_post, ->(user_ids) {where user_id: user_ids}
 
   validates :name, presence: true,
 length: {maximum: Settings.development.user.MAX_NAME_LENGTH}
@@ -53,6 +61,23 @@ length: {minimum: Settings.development.digits.DIGIT_6}, allow_nil: true
     self.reset_token = User.new_token
     update_columns reset_digest: User.digest(reset_token),
                    reset_sent_at: Time.zone.now
+  end
+
+  def feed
+    Micropost.relate_post(following_ids << id)
+             .includes(DEFAULT_INCLUDES_FOR_FEED)
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete(other_user)
+  end
+
+  def following? other_user
+    following.include?(other_user)
   end
 
   def send_password_reset_email

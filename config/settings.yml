@@ -12,12 +12,16 @@ defaults: &defaults
       book_page: "http://www.railstutorial.org/book"
       help_page: "http://www.railstutorial.org/help"
       homepage: "http://www.railstutorial.org/"
+  title:
+    following: "Following"
+    followers: "Followers"
   mailer:
     default_from_email: "noreply@example.com"
   pagy:
     page_10: 10
   image_settings:
     allowed_image_types: "image/jpeg,image/gif,image/png"
+    GRAVATAR_SIZE_SMALL: 30
 
 development:
   <<: *defaults

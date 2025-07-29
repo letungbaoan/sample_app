@@ -11,6 +11,7 @@
     </section>
   </aside>
   <div class="col-md-8">
+    <%= render "follow_form" if logged_in? %>
     <% if @microposts.any? %>
       <h3><%= t(".microposts_heading", count: @microposts.count) %></h3>
       <ol class="microposts">

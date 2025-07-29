@@ -15,6 +15,8 @@ vi:
       edit_user: "Chỉnh sửa người dùng"
       save_changes: "Lưu các thay đổi"
       update_your_profile: "Cập nhật hồ sơ của bạn"
+    follow:
+      follow: "Theo dõi"
     index:
       all_users: "Tất cả người dùng"
     new:
@@ -31,3 +33,5 @@ vi:
     update:
       profile_updated: "Đã cập nhật hồ sơ!"
       delete: "Xóa"
+    unfollow:
+      unfollow: "Bỏ theo dõi"
